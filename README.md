@@ -1,2 +1,2 @@
 # xresources-colors.vim
-Use colors from Xresources in vim.
+A colorscheme that grabs its colors from Xresources and bases color layouts on Base16-vim.
