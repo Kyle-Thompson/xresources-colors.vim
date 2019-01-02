@@ -30,13 +30,13 @@ function! g:Base16hi(group, foreground, background, attr, guisp)
   let l:cmd = ["hi", a:group]
 
   if a:foreground != ""
-    call extend(l:cmd, ["ctermfg=".a:foreground])
+    call add(l:cmd, "ctermfg=".a:foreground)
   endif
   if a:background != ""
-    call extend(l:cmd, ["ctermbg=".a:background])
+    call add(l:cmd, "ctermbg=".a:background)
   endif
   if a:attr != ""
-    call extend(l:cmd, ["gui=".a:attr, "cterm=".a:attr])
+    call add(l:cmd, "cterm=".a:attr)
   endif
   if a:guisp != ""
     call add(l:cmd, "guisp=".a:attr)
