@@ -40,7 +40,6 @@ function! g:Base16hi(group, foreground, background, attr, guisp)
   endif
   if a:guisp != ""
     call add(l:cmd, "guisp=".a:attr)
-    exec "hi " . a:group . " guisp=" . a:guisp
   endif
 
   exec join(l:cmd, " ")
@@ -126,12 +125,16 @@ call <sid>hi("Type",         "03", "",   "none", "")
 call <sid>hi("Typedef",      "03", "",   "",     "")
 
 " C highlighting
-call <sid>hi("cOperator",   "06", "", "", "")
-call <sid>hi("cNumbers",    "01", "", "", "")
+call <sid>hi("cOperator",   "03", "", "", "")
+call <sid>hi("cNumber",     "01", "", "", "")
+call <sid>hi("cFloat",      "01", "", "", "")
+call <sid>hi("cOctal",      "01", "", "", "")
+call <sid>hi("cOctalZero",  "01", "", "", "")
 call <sid>hi("cPreCondit",  "05", "", "", "")
 
 " CPP highlighting
-call <sid>hi("cppNumbers",  "01", "", "", "")
+call <sid>hi("cppNumber",   "01", "", "", "")
+call <sid>hi("cppCast",     "02", "", "", "")
 
 " C# highlighting
 call <sid>hi("csClass",                 "03", "", "", "")
