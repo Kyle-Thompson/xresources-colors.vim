@@ -53,7 +53,6 @@ endfun
 
 " Vim editor colors
 call <sid>hi("Normal",       "08", "00", "",     "")
-call <sid>hi("Bold",         "",   "",   "bold", "")
 call <sid>hi("Debug",        "01", "",   "",     "")
 call <sid>hi("Directory",    "04", "",   "",     "")
 call <sid>hi("Error",        "00", "01", "",     "")
@@ -128,7 +127,11 @@ call <sid>hi("Typedef",      "03", "",   "",     "")
 
 " C highlighting
 call <sid>hi("cOperator",   "06", "", "", "")
+call <sid>hi("cNumbers",    "01", "", "", "")
 call <sid>hi("cPreCondit",  "05", "", "", "")
+
+" CPP highlighting
+call <sid>hi("cppNumbers",  "01", "", "", "")
 
 " C# highlighting
 call <sid>hi("csClass",                 "03", "", "", "")
