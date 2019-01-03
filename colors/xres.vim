@@ -25,257 +25,234 @@ hi clear
 syntax reset
 let g:colors_name = "xres"
 
-" Highlighting function
-function! g:Base16hi(group, foreground, background, attr)
-  let l:cmd = ["hi", a:group]
-
-  if a:foreground != ""
-    call add(l:cmd, "ctermfg=".a:foreground)
-  endif
-  if a:background != ""
-    call add(l:cmd, "ctermbg=".a:background)
-  endif
-  if a:attr != ""
-    call add(l:cmd, "cterm=".a:attr)
-  endif
-
-  exec join(l:cmd, " ")
-endfunction
-
-
-fun <sid>hi(group, foreground, background, attr)
-  call Base16hi(a:group, a:foreground, a:background, a:attr)
-endfun
-
 " Vim editor colors
-call <sid>hi("Normal",       "08", "00", "")
-call <sid>hi("Debug",        "01", "",   "")
-call <sid>hi("Directory",    "04", "",   "")
-call <sid>hi("Error",        "00", "01", "")
-call <sid>hi("ErrorMsg",     "01", "00", "")
-call <sid>hi("Exception",    "01", "",   "")
-call <sid>hi("FoldColumn",   "06", "10", "")
-call <sid>hi("Folded",       "08", "10", "")
-call <sid>hi("IncSearch",    "10", "09", "none")
-call <sid>hi("Italic",       "",   "",   "none")
-call <sid>hi("Macro",        "01", "",   "")
-call <sid>hi("MatchParen",   "",   "08", "")
-call <sid>hi("ModeMsg",      "02", "",   "")
-call <sid>hi("MoreMsg",      "02", "",   "")
-call <sid>hi("Question",     "04", "",   "")
-call <sid>hi("Search",       "08", "03", "")
-call <sid>hi("Substitute",   "08", "03", "none")
-call <sid>hi("SpecialKey",   "08", "",   "")
-call <sid>hi("TooLong",      "01", "",   "")
-call <sid>hi("Underlined",   "01", "",   "")
-call <sid>hi("Visual",       "",   "11", "")
-call <sid>hi("VisualNOS",    "01", "",   "")
-call <sid>hi("WarningMsg",   "01", "",   "")
-call <sid>hi("WildMenu",     "01", "",   "")
-call <sid>hi("Title",        "04", "",   "none")
-call <sid>hi("Conceal",      "04", "00", "")
-call <sid>hi("Cursor",       "00", "07", "")
-call <sid>hi("NonText",      "08", "",   "")
-call <sid>hi("LineNr",       "08", "10", "")
-call <sid>hi("SignColumn",   "08", "10", "")
-call <sid>hi("StatusLine",   "12", "11", "none")
-call <sid>hi("StatusLineNC", "08", "10", "none")
-call <sid>hi("VertSplit",    "8",  "0",  "none")
-call <sid>hi("ColorColumn",  "",   "10", "none")
-call <sid>hi("CursorColumn", "",   "10", "none")
-call <sid>hi("CursorLine",   "",   "10", "none")
-call <sid>hi("CursorLineNr", "12", "10", "")
-call <sid>hi("QuickFixLine", "",   "10", "none")
-call <sid>hi("PMenu",        "07", "10", "none")
-call <sid>hi("PMenuSel",     "10", "07", "")
-call <sid>hi("TabLine",      "08", "10", "none")
-call <sid>hi("TabLineFill",  "08", "10", "none")
-call <sid>hi("TabLineSel",   "02", "10", "none")
+hi Normal                     ctermfg=07 ctermbg=00
+hi Debug                      ctermfg=01
+hi Directory                  ctermfg=04
+hi Error                      ctermfg=00 ctermbg=01
+hi ErrorMsg                   ctermfg=01 ctermbg=00
+hi Exception                  ctermfg=01
+hi FoldColumn                 ctermfg=06 ctermbg=10
+hi Folded                     ctermfg=08 ctermbg=10
+hi IncSearch                  ctermfg=10 ctermbg=09 cterm=none
+hi Italic                                           cterm=none
+hi Macro                      ctermfg=01
+hi MatchParen                            ctermbg=08
+hi ModeMsg                    ctermfg=02
+hi MoreMsg                    ctermfg=02
+hi Question                   ctermfg=04
+hi Search                     ctermfg=08 ctermbg=03
+hi Substitute                 ctermfg=08 ctermbg=03 cterm=none
+hi SpecialKey                 ctermfg=08
+hi TooLong                    ctermfg=01
+hi Underlined                 ctermfg=01
+hi Visual                     ctermbg=11
+hi VisualNOS                  ctermfg=01
+hi WarningMsg                 ctermfg=01
+hi WildMenu                   ctermfg=01
+hi Title                      ctermfg=04            cterm=none
+hi Conceal                    ctermfg=04 ctermbg=00
+hi Cursor                     ctermfg=00 ctermbg=07
+hi NonText                    ctermfg=08
+hi LineNr                     ctermfg=08 ctermbg=10
+hi SignColumn                 ctermfg=08 ctermbg=10
+hi StatusLine                 ctermfg=04 ctermbg=0  cterm=none
+hi StatusLineNC               ctermfg=07 ctermbg=0  cterm=none
+hi VertSplit                  ctermfg=08 ctermbg=0  cterm=none
+hi ColorColumn                           ctermbg=10 cterm=none
+hi CursorColumn                          ctermbg=10 cterm=none
+hi CursorLine                            ctermbg=10 cterm=none
+hi CursorLineNr               ctermfg=12 ctermbg=10
+hi QuickFixLine                          ctermbg=10 cterm=none
+hi PMenu                      ctermfg=07 ctermbg=10 cterm=none
+hi PMenuSel                   ctermfg=10 ctermbg=07
+hi TabLine                    ctermfg=08 ctermbg=10 cterm=none
+hi TabLineFill                ctermfg=08 ctermbg=10 cterm=none
+hi TabLineSel                 ctermfg=02 ctermbg=10 cterm=none
 
 " Standard syntax highlighting
-call <sid>hi("Boolean",      "09", "",   "")
-call <sid>hi("Character",    "01", "",   "")
-call <sid>hi("Comment",      "08", "",   "")
-call <sid>hi("Conditional",  "05", "",   "")
-call <sid>hi("Constant",     "09", "",   "")
-call <sid>hi("Define",       "05", "",   "none")
-call <sid>hi("Delimiter",    "14", "",   "")
-call <sid>hi("Float",        "09", "",   "")
-call <sid>hi("Function",     "04", "",   "")
-call <sid>hi("Identifier",   "01", "",   "none")
-call <sid>hi("Include",      "04", "",   "")
-call <sid>hi("Keyword",      "05", "",   "")
-call <sid>hi("Label",        "03", "",   "")
-call <sid>hi("Number",       "09", "",   "")
-call <sid>hi("Operator",     "07", "",   "none")
-call <sid>hi("PreProc",      "03", "",   "")
-call <sid>hi("Repeat",       "03", "",   "")
-call <sid>hi("Special",      "06", "",   "")
-call <sid>hi("SpecialChar",  "14", "",   "")
-call <sid>hi("Statement",    "01", "",   "")
-call <sid>hi("StorageClass", "03", "",   "")
-call <sid>hi("String",       "02", "",   "")
-call <sid>hi("Structure",    "05", "",   "")
-call <sid>hi("Tag",          "03", "",   "")
-call <sid>hi("Todo",         "03", "10", "")
-call <sid>hi("Type",         "03", "",   "none")
-call <sid>hi("Typedef",      "03", "",   "")
+hi Boolean                    ctermfg=09
+hi Character                  ctermfg=01
+hi Comment                    ctermfg=08
+hi Conditional                ctermfg=05
+hi Constant                   ctermfg=09
+hi Define                     ctermfg=05 cterm=none
+hi Delimiter                  ctermfg=14
+hi Float                      ctermfg=09
+hi Function                   ctermfg=04
+hi Identifier                 ctermfg=01 cterm=none
+hi Include                    ctermfg=04
+hi Keyword                    ctermfg=05
+hi Label                      ctermfg=03
+hi Number                     ctermfg=09
+hi Operator                   ctermfg=07 cterm=none
+hi PreProc                    ctermfg=03
+hi Repeat                     ctermfg=03
+hi Special                    ctermfg=06
+hi SpecialChar                ctermfg=14
+hi Statement                  ctermfg=01
+hi StorageClass               ctermfg=03
+hi String                     ctermfg=02
+hi Structure                  ctermfg=05
+hi Tag                        ctermfg=03
+hi Todo                       ctermfg=03 ctermbg=10
+hi Type                       ctermfg=03            cterm=none
+hi Typedef                    ctermfg=03
 
 " C highlighting
-call <sid>hi("cOperator",   "03", "", "")
-call <sid>hi("cNumber",     "01", "", "")
-call <sid>hi("cFloat",      "01", "", "")
-call <sid>hi("cOctal",      "01", "", "")
-call <sid>hi("cOctalZero",  "01", "", "")
-call <sid>hi("cPreCondit",  "05", "", "")
+hi cOperator                  ctermfg=03
+hi cNumber                    ctermfg=01
+hi cFloat                     ctermfg=01
+hi cOctal                     ctermfg=01
+hi cOctalZero                 ctermfg=01
+hi cPreCondit                 ctermfg=05
 
 " CPP highlighting
-call <sid>hi("cppNumber",   "01", "", "")
-call <sid>hi("cppCast",     "02", "", "")
+hi cppNumber                  ctermfg=01
+hi cppCast                    ctermfg=02
 
 " C# highlighting
-call <sid>hi("csClass",                 "03", "", "")
-call <sid>hi("csAttribute",             "03", "", "")
-call <sid>hi("csModifier",              "05", "", "")
-call <sid>hi("csType",                  "01", "", "")
-call <sid>hi("csUnspecifiedStatement",  "04", "", "")
-call <sid>hi("csContextualStatement",   "05", "", "")
-call <sid>hi("csNewDecleration",        "01", "", "")
+hi csClass                    ctermfg=03
+hi csAttribute                ctermfg=03
+hi csModifier                 ctermfg=05
+hi csType                     ctermfg=01
+hi csUnspecifiedStatement     ctermfg=04
+hi csContextualStatement      ctermfg=05
+hi csNewDecleration           ctermfg=01
 
 " CSS highlighting
-call <sid>hi("cssBraces",      "07", "", "")
-call <sid>hi("cssClassName",   "05", "", "")
-call <sid>hi("cssColor",       "06", "", "")
+hi cssBraces                  ctermfg=07
+hi cssClassName               ctermfg=05
+hi cssColor                   ctermfg=06
 
 " Diff highlighting
-call <sid>hi("DiffAdd",      "02", "10", "")
-call <sid>hi("DiffChange",   "08", "10", "")
-call <sid>hi("DiffDelete",   "01", "10", "")
-call <sid>hi("DiffText",     "04", "10", "")
-call <sid>hi("DiffAdded",    "02", "00", "")
-call <sid>hi("DiffFile",     "01", "00", "")
-call <sid>hi("DiffNewFile",  "02", "00", "")
-call <sid>hi("DiffLine",     "04", "00", "")
-call <sid>hi("DiffRemoved",  "01", "00", "")
+hi DiffAdd                    ctermfg=02 ctermbg=10
+hi DiffChange                 ctermfg=08 ctermbg=10
+hi DiffDelete                 ctermfg=01 ctermbg=10
+hi DiffText                   ctermfg=04 ctermbg=10
+hi DiffAdded                  ctermfg=02 ctermbg=00
+hi DiffFile                   ctermfg=01 ctermbg=00
+hi DiffNewFile                ctermfg=02 ctermbg=00
+hi DiffLine                   ctermfg=04 ctermbg=00
+hi DiffRemoved                ctermfg=01 ctermbg=00
 
 " Git highlighting
-call <sid>hi("gitcommitOverflow",      "01", "", "")
-call <sid>hi("gitcommitSummary",       "02", "", "")
-call <sid>hi("gitcommitComment",       "08", "", "")
-call <sid>hi("gitcommitUntracked",     "08", "", "")
-call <sid>hi("gitcommitDiscarded",     "08", "", "")
-call <sid>hi("gitcommitSelected",      "08", "", "")
-call <sid>hi("gitcommitHeader",        "05", "", "")
-call <sid>hi("gitcommitSelectedType",  "04", "", "")
-call <sid>hi("gitcommitUnmergedType",  "04", "", "")
-call <sid>hi("gitcommitDiscardedType", "04", "", "")
-call <sid>hi("gitcommitBranch",        "09", "", "bold")
-call <sid>hi("gitcommitUntrackedFile", "03", "", "")
-call <sid>hi("gitcommitUnmergedFile",  "01", "", "bold")
-call <sid>hi("gitcommitDiscardedFile", "01", "", "bold")
-call <sid>hi("gitcommitSelectedFile",  "02", "", "bold")
+hi gitcommitOverflow          ctermfg=01
+hi gitcommitSummary           ctermfg=02
+hi gitcommitComment           ctermfg=08
+hi gitcommitUntracked         ctermfg=08
+hi gitcommitDiscarded         ctermfg=08
+hi gitcommitSelected          ctermfg=08
+hi gitcommitHeader            ctermfg=05
+hi gitcommitSelectedType      ctermfg=04
+hi gitcommitUnmergedType      ctermfg=04
+hi gitcommitDiscardedType     ctermfg=04
+hi gitcommitBranch            ctermfg=09            cterm=bold
+hi gitcommitUntrackedFile     ctermfg=03
+hi gitcommitUnmergedFile      ctermfg=01            cterm=bold
+hi gitcommitDiscardedFile     ctermfg=01            cterm=bold
+hi gitcommitSelectedFile      ctermfg=02            cterm=bold
 
 " GitGutter highlighting
-call <sid>hi("GitGutterAdd",          "02", "10", "")
-call <sid>hi("GitGutterChange",       "04", "10", "")
-call <sid>hi("GitGutterDelete",       "01", "10", "")
-call <sid>hi("GitGutterChangeDelete", "05", "10", "")
+hi GitGutterAdd               ctermfg=02 ctermbg=10
+hi GitGutterChange            ctermfg=04 ctermbg=10
+hi GitGutterDelete            ctermfg=01 ctermbg=10
+hi GitGutterChangeDelete      ctermfg=05 ctermbg=10
 
 " HTML highlighting
-call <sid>hi("htmlBold",    "03", "", "")
-call <sid>hi("htmlItalic",  "05", "", "")
-call <sid>hi("htmlEndTag",  "07", "", "")
-call <sid>hi("htmlTag",     "07", "", "")
+hi htmlBold                   ctermfg=03
+hi htmlItalic                 ctermfg=05
+hi htmlEndTag                 ctermfg=07
+hi htmlTag                    ctermfg=07
 
 " JavaScript highlighting
-call <sid>hi("javaScript",        "07", "", "")
-call <sid>hi("javaScriptBraces",  "07", "", "")
-call <sid>hi("javaScriptNumber",  "09", "", "")
+hi javaScript                 ctermfg=07
+hi javaScriptBraces           ctermfg=07
+hi javaScriptNumber           ctermfg=09
 " pangloss/vim-javascript highlighting
-call <sid>hi("jsOperator",          "04", "", "")
-call <sid>hi("jsStatement",         "05", "", "")
-call <sid>hi("jsReturn",            "05", "", "")
-call <sid>hi("jsThis",              "01", "", "")
-call <sid>hi("jsClassDefinition",   "03", "", "")
-call <sid>hi("jsFunction",          "05", "", "")
-call <sid>hi("jsFuncName",          "04", "", "")
-call <sid>hi("jsFuncCall",          "04", "", "")
-call <sid>hi("jsClassFuncName",     "04", "", "")
-call <sid>hi("jsClassMethodType",   "05", "", "")
-call <sid>hi("jsRegexpString",      "06", "", "")
-call <sid>hi("jsGlobalObjects",     "03", "", "")
-call <sid>hi("jsGlobalNodeObjects", "03", "", "")
-call <sid>hi("jsExceptions",        "03", "", "")
-call <sid>hi("jsBuiltins",          "03", "", "")
+hi jsOperator                 ctermfg=04
+hi jsStatement                ctermfg=05
+hi jsReturn                   ctermfg=05
+hi jsThis                     ctermfg=01
+hi jsClassDefinition          ctermfg=03
+hi jsFunction                 ctermfg=05
+hi jsFuncName                 ctermfg=04
+hi jsFuncCall                 ctermfg=04
+hi jsClassFuncName            ctermfg=04
+hi jsClassMethodType          ctermfg=05
+hi jsRegexpString             ctermfg=06
+hi jsGlobalObjects            ctermfg=03
+hi jsGlobalNodeObjects        ctermfg=03
+hi jsExceptions               ctermfg=03
 
 " Mail highlighting
-call <sid>hi("mailQuoted1",  "03", "", "")
-call <sid>hi("mailQuoted2",  "02", "", "")
-call <sid>hi("mailQuoted3",  "05", "", "")
-call <sid>hi("mailQuoted4",  "06", "", "")
-call <sid>hi("mailQuoted5",  "04", "", "")
-call <sid>hi("mailQuoted6",  "03", "", "")
-call <sid>hi("mailURL",      "04", "", "")
-call <sid>hi("mailEmail",    "04", "", "")
+hi mailQuoted1                ctermfg=03
+hi mailQuoted2                ctermfg=02
+hi mailQuoted3                ctermfg=05
+hi mailQuoted4                ctermfg=06
+hi mailQuoted5                ctermfg=04
+hi mailQuoted6                ctermfg=03
+hi mailURL                    ctermfg=04
+hi mailEmail                  ctermfg=04
 
 " Markdown highlighting
-call <sid>hi("markdownCode",             "02", "",   "")
-call <sid>hi("markdownError",            "07", "00", "")
-call <sid>hi("markdownCodeBlock",        "02", "",   "")
-call <sid>hi("markdownHeadingDelimiter", "04", "",   "")
+hi markdownCode               ctermfg=02
+hi markdownError              ctermfg=07 ctermbg=00
+hi markdownCodeBlock          ctermfg=02
+hi markdownHeadingDelimiter   ctermfg=04
 
 " NERDTree highlighting
-call <sid>hi("NERDTreeDirSlash",  "04", "", "")
-call <sid>hi("NERDTreeExecFile",  "07", "", "")
+hi NERDTreeDirSlash           ctermfg=04
+hi NERDTreeExecFile           ctermfg=07
 
 " PHP highlighting
-call <sid>hi("phpMemberSelector",  "07", "", "")
-call <sid>hi("phpComparison",      "07", "", "")
-call <sid>hi("phpParent",          "07", "", "")
+hi phpMemberSelector          ctermfg=07
+hi phpComparison              ctermfg=07
+hi phpParent                  ctermfg=07
 
 " Python highlighting
-call <sid>hi("pythonOperator",  "05", "", "")
-call <sid>hi("pythonRepeat",    "05", "", "")
-call <sid>hi("pythonInclude",   "05", "", "")
-call <sid>hi("pythonStatement", "05", "", "")
+hi pythonOperator             ctermfg=05
+hi pythonRepeat               ctermfg=05
+hi pythonInclude              ctermfg=05
+hi pythonStatement            ctermfg=05
 
 " Ruby highlighting
-call <sid>hi("rubyAttribute",               "04", "", "")
-call <sid>hi("rubyConstant",                "03", "", "")
-call <sid>hi("rubyInterpolationDelimiter",  "14", "", "")
-call <sid>hi("rubyRegexp",                  "06", "", "")
-call <sid>hi("rubySymbol",                  "02", "", "")
-call <sid>hi("rubyStringDelimiter",         "02", "", "")
+hi rubyAttribute              ctermfg=04
+hi rubyConstant               ctermfg=03
+hi rubyInterpolationDelimiter ctermfg=14
+hi rubyRegexp                 ctermfg=06
+hi rubySymbol                 ctermfg=02
+hi rubyStringDelimiter        ctermfg=02
 
 " SASS highlighting
-call <sid>hi("sassidChar",     "01", "", "")
-call <sid>hi("sassClassChar",  "09", "", "")
-call <sid>hi("sassInclude",    "05", "", "")
-call <sid>hi("sassMixing",     "05", "", "")
-call <sid>hi("sassMixinName",  "04", "", "")
+hi sassidChar                 ctermfg=01
+hi sassClassChar              ctermfg=09
+hi sassInclude                ctermfg=05
+hi sassMixing                 ctermfg=05
+hi sassMixinName              ctermfg=04
 
 " Signify highlighting
-call <sid>hi("SignifySignAdd",     "02", "10", "")
-call <sid>hi("SignifySignChange",  "04", "10", "")
-call <sid>hi("SignifySignDelete",  "01", "10", "")
+hi SignifySignAdd             ctermfg=02 ctermbg=10
+hi SignifySignChange          ctermfg=04 ctermbg=10
+hi SignifySignDelete          ctermfg=01 ctermbg=10
 
 " Spelling highlighting
-call <sid>hi("SpellBad",     "", "00", "undercurl")
-call <sid>hi("SpellLocal",   "", "00", "undercurl")
-call <sid>hi("SpellCap",     "", "00", "undercurl")
-call <sid>hi("SpellRare",    "", "00", "undercurl")
+hi SpellBad                   ctermbg=00            cterm=undercurl
+hi SpellLocal                 ctermbg=00            cterm=undercurl
+hi SpellCap                   ctermbg=00            cterm=undercurl
+hi SpellRare                  ctermbg=00            cterm=undercurl
 
 " Startify highlighting
-call <sid>hi("StartifyBracket",  "08", "", "")
-call <sid>hi("StartifyFile",     "15", "", "")
-call <sid>hi("StartifyFooter",   "08", "", "")
-call <sid>hi("StartifyHeader",   "02", "", "")
-call <sid>hi("StartifyNumber",   "09", "", "")
-call <sid>hi("StartifyPath",     "08", "", "")
-call <sid>hi("StartifySection",  "05", "", "")
-call <sid>hi("StartifySelect",   "06", "", "")
-call <sid>hi("StartifySlash",    "08", "", "")
-call <sid>hi("StartifySpecial",  "08", "", "")
+hi StartifyBracket            ctermfg=08
+hi StartifyFile               ctermfg=15
+hi StartifyFooter             ctermfg=08
+hi StartifyHeader             ctermfg=02
+hi StartifyNumber             ctermfg=09
+hi StartifyPath               ctermfg=08
+hi StartifySection            ctermfg=05
+hi StartifySelect             ctermfg=06
+hi StartifySlash              ctermfg=08
+hi StartifySpecial            ctermfg=08
 
 " Remove functions
 delf <sid>hi
