@@ -84,7 +84,7 @@ hi Identifier                 ctermfg=01 cterm=none
 hi Include                    ctermfg=04
 hi Keyword                    ctermfg=05
 hi Label                      ctermfg=03
-hi Number                     ctermfg=09
+hi Number                     ctermfg=01
 hi Operator                   ctermfg=07 cterm=none
 hi PreProc                    ctermfg=03
 hi Repeat                     ctermfg=03
@@ -101,14 +101,9 @@ hi Typedef                    ctermfg=03
 
 " C highlighting
 hi cOperator                  ctermfg=03
-hi cNumber                    ctermfg=01
-hi cFloat                     ctermfg=01
-hi cOctal                     ctermfg=01
-hi cOctalZero                 ctermfg=01
 hi cPreCondit                 ctermfg=05
 
 " CPP highlighting
-hi cppNumber                  ctermfg=01
 hi cppCast                    ctermfg=02
 
 " C# highlighting
