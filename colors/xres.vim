@@ -56,21 +56,22 @@ hi Cursor                     ctermfg=00 ctermbg=07
 hi NonText                    ctermfg=08
 hi LineNr                     ctermfg=08 ctermbg=10
 hi SignColumn                 ctermfg=08 ctermbg=10
-hi StatusLine                 ctermfg=04 ctermbg=0  cterm=none
-hi StatusLineNC               ctermfg=07 ctermbg=0  cterm=none
-hi VertSplit                  ctermfg=08 ctermbg=0  cterm=none
+hi StatusLine                 ctermfg=04 ctermbg=00 cterm=none
+hi StatusLineNC               ctermfg=07 ctermbg=00 cterm=none
+hi VertSplit                  ctermfg=08 ctermbg=00 cterm=none
 hi ColorColumn                           ctermbg=10 cterm=none
 hi CursorColumn                          ctermbg=10 cterm=none
 hi CursorLine                            ctermbg=10 cterm=none
 hi CursorLineNr               ctermfg=12 ctermbg=10
 hi QuickFixLine                          ctermbg=10 cterm=none
-hi PMenu                      ctermfg=07 ctermbg=10 cterm=none
-hi PMenuSel                   ctermfg=10 ctermbg=07
+hi PMenu                      ctermfg=07 ctermbg=00 cterm=none
+hi PMenuSel                   ctermfg=04 ctermbg=00
 hi TabLine                    ctermfg=08 ctermbg=10 cterm=none
 hi TabLineFill                ctermfg=08 ctermbg=10 cterm=none
 hi TabLineSel                 ctermfg=02 ctermbg=10 cterm=none
 
 " Standard syntax highlighting
+" TODO
 hi Boolean                    ctermfg=09
 hi Character                  ctermfg=01
 hi Comment                    ctermfg=08
@@ -95,7 +96,7 @@ hi StorageClass               ctermfg=03
 hi String                     ctermfg=02
 hi Structure                  ctermfg=05
 hi Tag                        ctermfg=03
-hi Todo                       ctermfg=03 ctermbg=10
+hi Todo                       ctermfg=00 ctermbg=08
 hi Type                       ctermfg=03            cterm=none
 hi Typedef                    ctermfg=03
 
