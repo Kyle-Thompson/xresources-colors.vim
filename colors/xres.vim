@@ -46,7 +46,7 @@ hi Substitute                 ctermfg=08 ctermbg=03 cterm=none
 hi SpecialKey                 ctermfg=08
 hi TooLong                    ctermfg=01
 hi Underlined                 ctermfg=01
-hi Visual                     ctermbg=11
+hi Visual                                ctermbg=08
 hi VisualNOS                  ctermfg=01
 hi WarningMsg                 ctermfg=01
 hi WildMenu                   ctermfg=01
