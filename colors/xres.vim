@@ -249,6 +249,3 @@ hi StartifySection            ctermfg=05
 hi StartifySelect             ctermfg=06
 hi StartifySlash              ctermfg=08
 hi StartifySpecial            ctermfg=08
-
-" Remove functions
-delf <sid>hi
