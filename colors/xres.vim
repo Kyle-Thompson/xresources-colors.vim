@@ -1,24 +1,6 @@
 " xresources-colors.vim -- Xresources based vim colorscheme.
 " Author:       Kyle Thompson
-" Description:  A colorscheme based on the colors set in Xresources. Color
-"               layout copied from Base16-vim.
-
-" let s:gui00 = '161b1d'
-" let s:gui01 = '1f292e'
-" let s:gui02 = '516d7b'
-" let s:gui03 = '5a7b8c'
-" let s:gui04 = '7195a8'
-" let s:gui05 = '7ea2b4'
-" let s:gui06 = 'c1e4f6'
-" let s:gui07 = 'ebf8ff'
-" let s:gui08 = 'd22d72'
-" let s:gui09 = '935c25'
-" let s:gui0A = '8a8a0f'
-" let s:gui0B = '568c3b'
-" let s:gui0C = '2d8f6f'
-" let s:gui0D = '257fad'
-" let s:gui0E = '6b6bb8'
-" let s:gui0F = 'b72dd2'
+" Description:  A colorscheme based on the colors set in Xresources.
 
 " Theme setup
 hi clear
@@ -66,34 +48,34 @@ hi CursorLineNr               ctermfg=12 ctermbg=10
 hi QuickFixLine                          ctermbg=10 cterm=none
 hi PMenu                      ctermfg=07 ctermbg=00 cterm=none
 hi PMenuSel                   ctermfg=04 ctermbg=00
-hi TabLine                    ctermfg=08 ctermbg=10 cterm=none
-hi TabLineFill                ctermfg=08 ctermbg=10 cterm=none
-hi TabLineSel                 ctermfg=02 ctermbg=10 cterm=none
+hi TabLine                    ctermfg=07 ctermbg=00 cterm=none
+hi TabLineFill                ctermfg=07 ctermbg=00 cterm=none
+hi TabLineSel                 ctermfg=04 ctermbg=00 cterm=none
 
 " Standard syntax highlighting
-" TODO
-hi Boolean                    ctermfg=09
-hi Character                  ctermfg=01
+hi PodData                    ctermfg=09
+hi link Boolean   PodData
+hi link Character PodData
+hi link Number    PodData
+hi link Float     PodData
+hi String                     ctermfg=02
 hi Comment                    ctermfg=08
 hi Conditional                ctermfg=05
 hi Constant                   ctermfg=09
-hi Define                     ctermfg=05 cterm=none
+hi Define                     ctermfg=05            cterm=none
 hi Delimiter                  ctermfg=14
-hi Float                      ctermfg=09
 hi Function                   ctermfg=04
-hi Identifier                 ctermfg=01 cterm=none
+hi Identifier                 ctermfg=01            cterm=none
 hi Include                    ctermfg=04
 hi Keyword                    ctermfg=05
 hi Label                      ctermfg=03
-hi Number                     ctermfg=01
-hi Operator                   ctermfg=07 cterm=none
+hi Operator                   ctermfg=07            cterm=none
 hi PreProc                    ctermfg=03
-hi Repeat                     ctermfg=03
+hi Repeat                     ctermfg=05
 hi Special                    ctermfg=06
 hi SpecialChar                ctermfg=14
 hi Statement                  ctermfg=01
 hi StorageClass               ctermfg=03
-hi String                     ctermfg=02
 hi Structure                  ctermfg=05
 hi Tag                        ctermfg=03
 hi Todo                       ctermfg=00 ctermbg=08
@@ -105,7 +87,7 @@ hi cOperator                  ctermfg=03
 hi cPreCondit                 ctermfg=05
 
 " CPP highlighting
-hi cppCast                    ctermfg=02
+hi cppCast                    ctermfg=06
 
 " C# highlighting
 hi csClass                    ctermfg=03
@@ -233,10 +215,10 @@ hi SignifySignChange          ctermfg=04 ctermbg=10
 hi SignifySignDelete          ctermfg=01 ctermbg=10
 
 " Spelling highlighting
-hi SpellBad                   ctermbg=00            cterm=undercurl
-hi SpellLocal                 ctermbg=00            cterm=undercurl
-hi SpellCap                   ctermbg=00            cterm=undercurl
-hi SpellRare                  ctermbg=00            cterm=undercurl
+hi SpellBad                              ctermbg=00 cterm=undercurl
+hi SpellLocal                            ctermbg=00 cterm=undercurl
+hi SpellCap                              ctermbg=00 cterm=undercurl
+hi SpellRare                             ctermbg=00 cterm=undercurl
 
 " Startify highlighting
 hi StartifyBracket            ctermfg=08
