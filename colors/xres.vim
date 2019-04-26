@@ -69,8 +69,9 @@ hi Identifier                 ctermfg=01            cterm=none
 hi Include                    ctermfg=04
 hi Keyword                    ctermfg=05
 hi Label                      ctermfg=03
-hi Operator                   ctermfg=07            cterm=none
+hi Operator                   ctermfg=06            cterm=none
 hi PreProc                    ctermfg=03
+hi PreCondit                  ctermfg=05
 hi Repeat                     ctermfg=05
 hi Special                    ctermfg=06
 hi SpecialChar                ctermfg=14
@@ -82,26 +83,8 @@ hi Todo                       ctermfg=00 ctermbg=08
 hi Type                       ctermfg=03            cterm=none
 hi Typedef                    ctermfg=03
 
-" C highlighting
-hi cOperator                  ctermfg=03
-hi cPreCondit                 ctermfg=05
-
 " CPP highlighting
 hi cppCast                    ctermfg=06
-
-" C# highlighting
-hi csClass                    ctermfg=03
-hi csAttribute                ctermfg=03
-hi csModifier                 ctermfg=05
-hi csType                     ctermfg=01
-hi csUnspecifiedStatement     ctermfg=04
-hi csContextualStatement      ctermfg=05
-hi csNewDecleration           ctermfg=01
-
-" CSS highlighting
-hi cssBraces                  ctermfg=07
-hi cssClassName               ctermfg=05
-hi cssColor                   ctermfg=06
 
 " Diff highlighting
 hi DiffAdd                    ctermfg=02 ctermbg=10
@@ -137,97 +120,14 @@ hi GitGutterChange            ctermfg=04 ctermbg=10
 hi GitGutterDelete            ctermfg=01 ctermbg=10
 hi GitGutterChangeDelete      ctermfg=05 ctermbg=10
 
-" HTML highlighting
-hi htmlBold                   ctermfg=03
-hi htmlItalic                 ctermfg=05
-hi htmlEndTag                 ctermfg=07
-hi htmlTag                    ctermfg=07
-
-" JavaScript highlighting
-hi javaScript                 ctermfg=07
-hi javaScriptBraces           ctermfg=07
-hi javaScriptNumber           ctermfg=09
-" pangloss/vim-javascript highlighting
-hi jsOperator                 ctermfg=04
-hi jsStatement                ctermfg=05
-hi jsReturn                   ctermfg=05
-hi jsThis                     ctermfg=01
-hi jsClassDefinition          ctermfg=03
-hi jsFunction                 ctermfg=05
-hi jsFuncName                 ctermfg=04
-hi jsFuncCall                 ctermfg=04
-hi jsClassFuncName            ctermfg=04
-hi jsClassMethodType          ctermfg=05
-hi jsRegexpString             ctermfg=06
-hi jsGlobalObjects            ctermfg=03
-hi jsGlobalNodeObjects        ctermfg=03
-hi jsExceptions               ctermfg=03
-
-" Mail highlighting
-hi mailQuoted1                ctermfg=03
-hi mailQuoted2                ctermfg=02
-hi mailQuoted3                ctermfg=05
-hi mailQuoted4                ctermfg=06
-hi mailQuoted5                ctermfg=04
-hi mailQuoted6                ctermfg=03
-hi mailURL                    ctermfg=04
-hi mailEmail                  ctermfg=04
-
 " Markdown highlighting
 hi markdownCode               ctermfg=02
 hi markdownError              ctermfg=07 ctermbg=00
 hi markdownCodeBlock          ctermfg=02
 hi markdownHeadingDelimiter   ctermfg=04
 
-" NERDTree highlighting
-hi NERDTreeDirSlash           ctermfg=04
-hi NERDTreeExecFile           ctermfg=07
-
-" PHP highlighting
-hi phpMemberSelector          ctermfg=07
-hi phpComparison              ctermfg=07
-hi phpParent                  ctermfg=07
-
 " Python highlighting
 hi pythonOperator             ctermfg=05
 hi pythonRepeat               ctermfg=05
 hi pythonInclude              ctermfg=05
 hi pythonStatement            ctermfg=05
-
-" Ruby highlighting
-hi rubyAttribute              ctermfg=04
-hi rubyConstant               ctermfg=03
-hi rubyInterpolationDelimiter ctermfg=14
-hi rubyRegexp                 ctermfg=06
-hi rubySymbol                 ctermfg=02
-hi rubyStringDelimiter        ctermfg=02
-
-" SASS highlighting
-hi sassidChar                 ctermfg=01
-hi sassClassChar              ctermfg=09
-hi sassInclude                ctermfg=05
-hi sassMixing                 ctermfg=05
-hi sassMixinName              ctermfg=04
-
-" Signify highlighting
-hi SignifySignAdd             ctermfg=02 ctermbg=10
-hi SignifySignChange          ctermfg=04 ctermbg=10
-hi SignifySignDelete          ctermfg=01 ctermbg=10
-
-" Spelling highlighting
-hi SpellBad                              ctermbg=00 cterm=undercurl
-hi SpellLocal                            ctermbg=00 cterm=undercurl
-hi SpellCap                              ctermbg=00 cterm=undercurl
-hi SpellRare                             ctermbg=00 cterm=undercurl
-
-" Startify highlighting
-hi StartifyBracket            ctermfg=08
-hi StartifyFile               ctermfg=15
-hi StartifyFooter             ctermfg=08
-hi StartifyHeader             ctermfg=02
-hi StartifyNumber             ctermfg=09
-hi StartifyPath               ctermfg=08
-hi StartifySection            ctermfg=05
-hi StartifySelect             ctermfg=06
-hi StartifySlash              ctermfg=08
-hi StartifySpecial            ctermfg=08
