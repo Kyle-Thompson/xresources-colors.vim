@@ -38,8 +38,8 @@ hi Cursor                     ctermfg=00 ctermbg=07
 hi NonText                    ctermfg=08
 hi LineNr                     ctermfg=08 ctermbg=10
 hi SignColumn                 ctermfg=08 ctermbg=10
-hi StatusLine                 ctermfg=04 ctermbg=00 cterm=none
-hi StatusLineNC               ctermfg=07 ctermbg=00 cterm=none
+hi StatusLine                 ctermfg=04 ctermbg=08 cterm=none
+hi StatusLineNC               ctermfg=07 ctermbg=08 cterm=none
 hi VertSplit                  ctermfg=08 ctermbg=00 cterm=none
 hi ColorColumn                           ctermbg=10 cterm=none
 hi CursorColumn                          ctermbg=10 cterm=none
@@ -59,7 +59,7 @@ hi link Character PodData
 hi link Number    PodData
 hi link Float     PodData
 hi String                     ctermfg=02
-hi Comment                    ctermfg=08
+hi Comment                    ctermfg=15
 hi Conditional                ctermfg=05
 hi Constant                   ctermfg=09
 hi Define                     ctermfg=05            cterm=none
